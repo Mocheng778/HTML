@@ -162,10 +162,11 @@
         <section class="card" id="guide">
             <h2>完整安装教程</h2>
             <ol style="padding-left:20px;line-height:2;">
-                <li>Android13及以上新机：提取init_boot镜像，选择推荐直接安装模式</li>
-                <li>系统OTA升级后刷机：独立槽位安装，防止更新覆盖变砖</li>
-                <li>Android12及以下旧机型：使用AnyKernel刷入boot分区</li>
-                <li>免刷机方案：下载LKM内核包，APP内直接加载模块，无需电脑</li>
+                <li>Android13及以上新机：①提取init_boot镜像，进行ApkeSU修补，通过Kernel Flasher工具进行刷写
+                ②如果是KernelSU转root管理器只需要给ApkeSU超级用户权限，选择推荐直接安装模式就OK了</li>
+                <li>系统OTA升级后刷机：独立槽位安装ab槽位，防止更新掉root转入root分区使用的</li>
+                <li>Android12及以下旧机型：使用AnyKernel刷入指定的ak3包，选择指定的a/b分区</li>
+                <li>ApkeSU更新：如果发现内核和管理器不匹配，直接点击工作中，推荐直接安装就可以更新内核版本</li>
             </ol>
         </section>
     </div>
