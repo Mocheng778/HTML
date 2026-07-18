@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>ApkeSU 官方下载站 | V2.6.0</title>
+    <title>ApkeSU 官方下载站 | V2.6.0 32685</title>
     <style>
         *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui, sans-serif;}
         body{background:#f8f5fc;color:#222;line-height:1.6;}
@@ -39,7 +39,6 @@
     </style>
 </head>
 <body>
-<!-- 复制成功弹窗 -->
 <div class="toast" id="toast">复制成功！打开QQ粘贴即可访问</div>
 
 <nav>
@@ -49,6 +48,7 @@
         <a href="#func">功能介绍</a>
         <a href="#theme">主题预览</a>
         <a href="#device">机型适配</a>
+        <a href="#download">下载中心</a>
         <a href="#social" class="active">官方社群</a>
         <a href="#guide">安装教程</a>
     </div>
@@ -56,18 +56,19 @@
 
 <section class="banner" id="home">
     <h1>ApkeSU 二次元LKM Root管理器</h1>
-    <p>版本 2.6.0｜内置KPatch Next｜海量动漫像素主题｜全品牌手机平板通用</p>
+    <p>版本 2.6.0 (32685)｜内置KPatch Next｜海量动漫像素主题｜全品牌手机平板通用</p>
     <a href="#download" class="btn">前往下载</a>
 </section>
 
 <div class="container">
     <section class="card" id="download">
-        <h2>稳定版 123云盘高速直链下载</h2>
+        <h2>稳定版 V2.6.0 32685 123云盘高速直链下载</h2>
         <div class="download-box">
             <h3>APK主安装包（推荐）</h3>
-            <p>文件：ApkeSU 安装包</p>
+            <p>文件：ApkeSU_2.6.0_32685-release.apk</p>
             <p>无广告、免登录、不限速CDN分发</p>
-            <a class="download-link" href="https://1813997299.cdn.123clouddisk.com/1813997299/应用/ApkeSU-release.apk" download>一键下载 ApkeSU 主程序</a>
+            <!-- 已替换你提供的真实下载链接 -->
+            <a class="download-link" href="https://1813997299.cdn.123clouddisk.com/1813997299/36467323" download>一键下载 ApkeSU 主程序</a>
 
             <h3 style="margin-top:24px">配套刷机文件</h3>
             <a class="download-link alt" href="" download>AnyKernel刷机包（旧机型boot镜像）</a>
@@ -85,24 +86,20 @@
         <h2>官方唯一社群渠道</h2>
         <p style="margin-bottom:15px;">更新推送、问题反馈、资源分享、内测资格仅在此发布，谨防假冒渠道</p>
         <div class="social-box">
-            <!-- QQ群区域 -->
             <h3>👥 ApkeSU 官方QQ群（群号：778719605）</h3>
             <p class="tip-text">QQ浏览器/原厂自带浏览器可直接打开；其他浏览器请复制链接到QQ内访问</p>
             <div class="row-box">
-                <!-- mqq底层协议直唤QQ群 -->
+                <!-- QQ原生底层协议，优先唤起APP -->
                 <a href="mqq://im/chat?chat_type=group&uin=778719605&version=1&src_type=web" target="_blank" class="social-link">直接打开QQ群</a>
-                <!-- 复制链接兜底 -->
                 <button class="social-link copy" onclick="copyText('https://jq.qq.com/?_wv=1027&k=778719605')">复制群链接备用</button>
             </div>
 
-            <!-- QQ频道区域（重点新增完整唤端方案） -->
-            <h3 style="margin-top:24px;">📢 ApkeSU 官方QQ频道（频道邀请链接）</h3>
-            <p class="tip-text">QQ频道移动端限制更严格，优先使用复制链接方案；QQ浏览器可直接唤起</p>
+            <h3 style="margin-top:20px;">📢 #ApkeSU 官方QQ频道（ID：pd33557570）</h3>
+            <p class="tip-text">修复频道跳转协议；唤起失败时使用复制链接方案粘贴进QQ即可加入</p>
             <div class="row-box">
-                <!-- mqqapi协议转发，直接唤起QQ打开频道 -->
-                <a href="mqqapi://forward/url?src_type=web&version=1&url=https%3A%2F%2Fqun.qq.com%2Fqqweb%2Fqunpro%2Fshare%3F_wv%3D3%26_wwv%3D128%26inviteCode%3D1fdDi8%26from%3D246610%26biz%3Dka" target="_blank" class="social-link chan">尝试直接打开频道</a>
-                <!-- 完整频道链接复制兜底（把inviteCode替换成你自己频道的邀请码） -->
-                <button class="social-link copy" onclick="copyText('https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=1fdDi8&from=246610&biz=ka')">复制频道链接备用</button>
+                <!-- 修复：URL编码完整频道分享链接，使用mqqapi转发协议，绕过电脑端限制 -->
+                <a href="mqqapi://forward/url?src_type=web&version=1&url=https%3A%2F%2Fpd.qq.com%2Fpd33557570" target="_blank" class="social-link chan">尝试直接打开QQ频道</a>
+                <button class="social-link copy" onclick="copyText('https://pd.qq.com/pd33557570')">复制频道链接备用</button>
             </div>
         </div>
     </section>
@@ -176,13 +173,12 @@
 
 <footer>
     <p>ApkeSU Open Source Project © 2026｜文件分发：123云盘CDN</p>
-    <p style="margin-top:8px;font-size:14px;">QQ群：778719605｜QQ频道（复制链接加入）</p>
+    <p style="margin-top:8px;font-size:14px;">QQ群：778719605｜频道ID：pd33557570</p>
     <p style="margin-top:8px;font-size:14px;">适配设备：OPPO/一加/真我/小米/红米/vivo/红魔/联想/魅族 全手机平板</p>
     <p style="margin-top:8px;font-size:14px;color:#888;">仅用于安卓设备技术学习调试，禁止违规商用</p>
 </footer>
 
 <script>
-// 通用一键复制函数
 function copyText(text) {
     let tempInput = document.createElement('textarea');
     tempInput.value = text;
@@ -190,7 +186,6 @@ function copyText(text) {
     tempInput.select();
     document.execCommand('copy');
     document.body.removeChild(tempInput);
-    // 弹出提示
     const toast = document.getElementById('toast');
     toast.style.display = 'block';
     setTimeout(()=>toast.style.display = 'none', 2000);
