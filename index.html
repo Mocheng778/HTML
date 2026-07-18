@@ -11,24 +11,31 @@
         .logo{font-size:24px;font-weight:bold;color:#9944dd;}
         .nav-menu a{margin:0 12px;text-decoration:none;color:#333;}
         .nav-menu a.active{color:#9944dd;font-weight:bold;}
+        .nav-menu a:hover{color:#9944dd;transition:0.2s;}
         .banner{width:100%;height:60vh;background:linear-gradient(135deg,#e8dfff,#d0e8ff);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 20px;}
         .banner h1{font-size:42px;color:#552299;margin-bottom:12px;}
         .banner p{font-size:18px;max-width:700px;margin-bottom:24px;color:#444;}
         .btn{padding:14px 32px;background:#9944dd;color:#fff;border-radius:99px;text-decoration:none;font-weight:bold;font-size:18px;transition:0.2s;}
-        .btn:hover{background:#7722bb;}
+        .btn:hover{background:#7722bb;transform:scale(1.03);}
         .container{max-width:1200px;margin:0 auto;padding:60px 20px;}
         .card{background:#fff;border-radius:16px;padding:30px;margin-bottom:40px;box-shadow:0 4px 20px rgba(0,0,0,0.04);}
         .card h2{color:#7722bb;margin-bottom:20px;border-left:4px solid #9944dd;padding-left:12px;}
         .download-box{background:#f3eaff;border-radius:12px;padding:24px;border:1px solid #ddccff;}
-        .download-link{display:block;padding:16px;background:#9944dd;color:#fff;border-radius:10px;text-decoration:none;margin:12px 0;font-weight:bold;text-align:center;}
+        .download-link{display:block;padding:16px;background:#9944dd;color:#fff;border-radius:10px;text-decoration:none;margin:12px 0;font-weight:bold;text-align:center;transition:0.2s;}
+        .download-link:hover{opacity:0.9;transform:scale(1.01);}
         .download-link.alt{background:#4477dd;}
         .grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px,1fr));gap:24px;margin-top:20px;}
-        .grid-item{background:#f9f6ff;padding:20px;border-radius:12px;}
+        .grid-item{background:#f9f6ff;padding:20px;border-radius:12px;transition:0.2s;}
+        .grid-item:hover{transform:translateY(-4px);box-shadow:0 4px 12px #e0d4f5;}
         .social-box{background:linear-gradient(135deg,#9944dd22,#4477dd22);border-radius:12px;padding:24px;border:1px solid #c9b4ff;margin-top:10px;}
         .social-link{display:inline-block;padding:12px 24px;background:#9944dd;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;margin:8px 10px 8px 0;transition:0.2s;}
         .social-link.chan{background:#4477dd;}
         .social-link:hover{opacity:0.9;transform:scale(1.02);}
         footer{text-align:center;padding:40px;background:#222;color:#aaa;margin-top:60px;}
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
@@ -64,8 +71,10 @@
                 <a class="download-link" href="https://1813997299.cdn.123clouddisk.com/1813997299/应用/ApkeSU_2.6.0_32685-release.apk" download>一键下载 ApkeSU 主程序</a>
 
                 <h3 style="margin-top:24px">配套刷机文件</h3>
-                <a class="download-link alt" href="#">AnyKernel刷机包（旧机型boot镜像）</a>
-                <a class="download-link alt" href="#">LKM免刷内核包</a>
+                <!-- 补全可替换说明文字，保留空白href方便你后续填链接 -->
+                <a class="download-link alt" href="" download>AnyKernel刷机包（旧机型boot镜像）</a>
+                <a class="download-link alt" href="" download>LKM免刷内核包</a>
+                <p style="font-size:14px;color:#666;margin-top:8px;">提示：将上方href=""引号内填入你的文件下载直链即可生效</p>
             </div>
             <div style="margin-top:20px;">
                 <h4>版本说明</h4>
@@ -85,8 +94,9 @@
 
                 <h3 style="margin-top:20px;">📢 #ApkeSU 官方频道</h3>
                 <p>频道ID：pd33557570｜推送更新公告与修复日志</p>
-                <a href="#" target="_blank" class="social-link chan">点击一下加入频道</a>
-                <p style="font-size:14px;color:#666;margin-top:10px;">使用提示：将href="#"替换为你的频道真实链接即可</p>
+                <!-- 保留空白链接，增加注释提示修改 -->
+                <a href="" target="_blank" class="social-link chan">点击一下加入频道</a>
+                <p style="font-size:14px;color:#666;margin-top:10px;">使用提示：将href=""替换为你的频道真实链接即可</p>
             </div>
         </section>
 
