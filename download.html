@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ApkeSU 一键自动下载</title>
+<style>
+body{text-align:center;padding:60px 20px;font-size:18px;background:#f8f5fc;}
+.down-btn{padding:12px 26px;background:#9944dd;color:#fff;border-radius:8px;text-decoration:none;display:inline-block;margin-top:20px;}
+</style>
+</head>
+<body>
+<h2>ApkeSU V2.6.0 安装包正在自动下载</h2>
+<p>浏览器未弹出下载窗口，请点击下方按钮手动获取</p>
+<a href="https://1813997299.cdn.123clouddisk.com/1813997299/应用/ApkeSU_2.6.0_32685-release.apk" download class="down-btn">手动下载APK安装包</a>
+<script>
+window.onload = ()=>{
+  let autoDownload = document.createElement('a');
+  autoDownload.href = "https://1813997299.cdn.123clouddisk.com/1813997299/应用/ApkeSU_2.6.0_32685-release.apk";
+  autoDownload.download = "ApkeSU_2.6.0_32685-release.apk";
+  document.body.appendChild(autoDownload);
+  autoDownload.click();
+  autoDownload.remove();
+}
+</script>
+</body>
+</html>
