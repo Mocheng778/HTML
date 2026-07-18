@@ -2,8 +2,8 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ApkeSU 官方下载站 | V2.6.0 32685</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ApkeSU 官方下载站 | V2.6.0</title>
     <style>
         *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui, sans-serif;}
         body{background:#f8f5fc;color:#222;line-height:1.6;}
@@ -28,155 +28,173 @@
         .grid-item{background:#f9f6ff;padding:20px;border-radius:12px;transition:0.2s;}
         .grid-item:hover{transform:translateY(-4px);box-shadow:0 4px 12px #e0d4f5;}
         .social-box{background:linear-gradient(135deg,#9944dd22,#4477dd22);border-radius:12px;padding:24px;border:1px solid #c9b4ff;margin-top:10px;}
-        .social-link{display:inline-block;padding:12px 24px;background:#9944dd;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;margin:8px 10px 8px 0;transition:0.2s;}
+        .row-box{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0;}
+        .social-link{padding:12px 24px;background:#9944dd;color:#fff;border-radius:8px;border:none;font-weight:bold;min-height:44px;line-height:20px;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block;}
         .social-link.chan{background:#4477dd;}
-        .social-link:hover{opacity:0.9;transform:scale(1.02);}
+        .social-link.copy{background:#2288ee;}
+        .tip-text{color:#f23333;font-size:14px;margin:8px 0 16px;}
         footer{text-align:center;padding:40px;background:#222;color:#aaa;margin-top:60px;}
-        /* 平滑滚动 */
-        html {
-            scroll-behavior: smooth;
-        }
+        html {scroll-behavior: smooth;}
+        .toast{position:fixed;top:30px;left:50%;transform:translateX(-50%);background:#333;color:#fff;padding:10px 24px;border-radius:99px;display:none;z-index:9999;}
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav>
-        <div class="logo">ApkeSU</div>
-        <div class="nav-menu">
-            <a href="#home">首页</a>
-            <a href="#func">功能介绍</a>
-            <a href="#theme">主题预览</a>
-            <a href="#device">机型适配</a>
-            <a href="#download">下载中心</a>
-            <a href="#social" class="active">官方社群</a>
-            <a href="#guide">安装教程</a>
-        </div>
-    </nav>
+<!-- 复制成功弹窗 -->
+<div class="toast" id="toast">复制成功！打开QQ粘贴即可访问</div>
 
-    <!-- 顶部横幅 -->
-    <section class="banner" id="home">
-        <h1>ApkeSU 二次元LKM Root管理器</h1>
-        <p>版本 2.6.0 (32685)｜内置KPatch Next｜海量动漫像素主题｜全品牌手机平板通用</p>
-        <a href="#download" class="btn">前往下载</a>
+<nav>
+    <div class="logo">ApkeSU</div>
+    <div class="nav-menu">
+        <a href="#home">首页</a>
+        <a href="#func">功能介绍</a>
+        <a href="#theme">主题预览</a>
+        <a href="#device">机型适配</a>
+        <a href="#social" class="active">官方社群</a>
+        <a href="#guide">安装教程</a>
+    </div>
+</nav>
+
+<section class="banner" id="home">
+    <h1>ApkeSU 二次元LKM Root管理器</h1>
+    <p>版本 2.6.0｜内置KPatch Next｜海量动漫像素主题｜全品牌手机平板通用</p>
+    <a href="#download" class="btn">前往下载</a>
+</section>
+
+<div class="container">
+    <section class="card" id="download">
+        <h2>稳定版 123云盘高速直链下载</h2>
+        <div class="download-box">
+            <h3>APK主安装包（推荐）</h3>
+            <p>文件：ApkeSU 安装包</p>
+            <p>无广告、免登录、不限速CDN分发</p>
+            <a class="download-link" href="https://1813997299.cdn.123clouddisk.com/1813997299/应用/ApkeSU-release.apk" download>一键下载 ApkeSU 主程序</a>
+
+            <h3 style="margin-top:24px">配套刷机文件</h3>
+            <a class="download-link alt" href="" download>AnyKernel刷机包（旧机型boot镜像）</a>
+            <a class="download-link alt" href="" download>LKM免刷内核包</a>
+            <p style="font-size:14px;color:#666;margin-top:8px;">提示：将上方href=""引号内填入你的文件下载直链即可生效</p>
+        </div>
+        <div style="margin-top:20px;">
+            <h4>版本说明</h4>
+            <p>内核模式：Tracepoint LKM｜完整兼容SELinux放行</p>
+            <p>内置组件：KPatch Next、分区挂载、开机自动救砖回档</p>
+        </div>
     </section>
 
-    <div class="container">
-        <!-- 下载区域（123云盘CDN直链） -->
-        <section class="card" id="download">
-            <h2>稳定版 V2.6.0 123云盘高速直链下载</h2>
-            <div class="download-box">
-                <h3>APK主安装包（推荐）</h3>
-                <p>文件：ApkeSU_2.6.0_32685-release.apk</p>
-                <p>无广告、免登录、不限速CDN分发</p>
-                <a class="download-link" href="https://1813997299.cdn.123clouddisk.com/1813997299/应用/ApkeSU_2.6.0_32685-release.apk" download>一键下载 ApkeSU 主程序</a>
-
-                <h3 style="margin-top:24px">配套刷机文件</h3>
-                <!-- 补全可替换说明文字，保留空白href方便你后续填链接 -->
-                <a class="download-link alt" href="" download>AnyKernel刷机包（旧机型boot镜像）</a>
-                <a class="download-link alt" href="" download>LKM免刷内核包</a>
-                <p style="font-size:14px;color:#666;margin-top:8px;">提示：将上方href=""引号内填入你的文件下载直链即可生效</p>
+    <section class="card" id="social">
+        <h2>官方唯一社群渠道</h2>
+        <p style="margin-bottom:15px;">更新推送、问题反馈、资源分享、内测资格仅在此发布，谨防假冒渠道</p>
+        <div class="social-box">
+            <!-- QQ群区域 -->
+            <h3>👥 ApkeSU 官方QQ群（群号：778719605）</h3>
+            <p class="tip-text">QQ浏览器/原厂自带浏览器可直接打开；其他浏览器请复制链接到QQ内访问</p>
+            <div class="row-box">
+                <!-- mqq底层协议直唤QQ群 -->
+                <a href="mqq://im/chat?chat_type=group&uin=778719605&version=1&src_type=web" target="_blank" class="social-link">直接打开QQ群</a>
+                <!-- 复制链接兜底 -->
+                <button class="social-link copy" onclick="copyText('https://jq.qq.com/?_wv=1027&k=778719605')">复制群链接备用</button>
             </div>
-            <div style="margin-top:20px;">
-                <h4>版本说明</h4>
-                <p>内核模式：Tracepoint LKM｜完整兼容SELinux放行</p>
-                <p>内置组件：KPatch Next、分区挂载、开机自动救砖回档</p>
+
+            <!-- QQ频道区域（重点新增完整唤端方案） -->
+            <h3 style="margin-top:24px;">📢 ApkeSU 官方QQ频道（频道邀请链接）</h3>
+            <p class="tip-text">QQ频道移动端限制更严格，优先使用复制链接方案；QQ浏览器可直接唤起</p>
+            <div class="row-box">
+                <!-- mqqapi协议转发，直接唤起QQ打开频道 -->
+                <a href="mqqapi://forward/url?src_type=web&version=1&url=https%3A%2F%2Fqun.qq.com%2Fqqweb%2Fqunpro%2Fshare%3F_wv%3D3%26_wwv%3D128%26inviteCode%3D1fdDi8%26from%3D246610%26biz%3Dka" target="_blank" class="social-link chan">尝试直接打开频道</a>
+                <!-- 完整频道链接复制兜底（把inviteCode替换成你自己频道的邀请码） -->
+                <button class="social-link copy" onclick="copyText('https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=1fdDi8&from=246610&biz=ka')">复制频道链接备用</button>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 社群板块 -->
-        <section class="card" id="social">
-            <h2>官方唯一社群渠道</h2>
-            <p style="margin-bottom:15px;">更新推送、问题反馈、资源分享、内测资格仅在此发布，谨防假冒渠道</p>
-            <div class="social-box">
-                <h3>👥 ApkeSU 官方QQ群</h3>
-                <p>群号：778719605｜机型答疑、bug提交、资源分享</p>
-                <a href="https://jq.qq.com/?_wv=1027&k=778719605" target="_blank" class="social-link">点击一下进QQ加群</a>
-
-                <h3 style="margin-top:20px;">📢 #ApkeSU 官方频道</h3>
-                <p>频道ID：pd33557570｜推送更新公告与修复日志</p>
-                <!-- 保留空白链接，增加注释提示修改 -->
-                <a href="" target="_blank" class="social-link chan">点击一下加入频道</a>
-                <p style="font-size:14px;color:#666;margin-top:10px;">使用提示：将href=""替换为你的频道真实链接即可</p>
+    <section class="card" id="func">
+        <h2>软件核心功能</h2>
+        <div class="grid">
+            <div class="grid-item">
+                <h3>LKM底层Root</h3>
+                <p>无需修补Boot镜像加载内核模块，完整Root权限，兼容SELinux强制模式</p>
             </div>
-        </section>
-
-        <!-- 软件核心功能 -->
-        <section class="card" id="func">
-            <h2>软件核心功能</h2>
-            <div class="grid">
-                <div class="grid-item">
-                    <h3>LKM底层Root</h3>
-                    <p>无需修补Boot镜像加载内核模块，完整Root权限，兼容SELinux强制模式</p>
-                </div>
-                <div class="grid-item">
-                    <h3>KPatch Root隐藏</h3>
-                    <p>清除Root检测痕迹，适配银行、支付、游戏风控软件</p>
-                </div>
-                <div class="grid-item">
-                    <h3>二次元自定义UI</h3>
-                    <p>20+像素动漫主题，自定义壁纸、开机动画、APP伪装图标</p>
-                </div>
-                <div class="grid-item">
-                    <h3>全自动救砖防护</h3>
-                    <p>自动备份boot分区，卡logo、无限重启自动回滚修复</p>
-                </div>
-                <div class="grid-item">
-                    <h3>快捷工具箱</h3>
-                    <p>一键进入Rec、Fastboot、EDL深度下载模式</p>
-                </div>
-                <div class="grid-item">
-                    <h3>模块统一管理</h3>
-                    <p>批量开关Root模块，自动检测版本更新</p>
-                </div>
+            <div class="grid-item">
+                <h3>KPatch Root隐藏</h3>
+                <p>清除Root检测痕迹，适配银行、支付、游戏风控软件</p>
             </div>
-        </section>
+            <div class="grid-item">
+                <h3>二次元自定义UI</h3>
+                <p>20+像素动漫主题，自定义壁纸、开机动画、APP伪装图标</p>
+            </div>
+            <div class="grid-item">
+                <h3>全自动救砖防护</h3>
+                <p>自动备份boot分区，卡logo、无限重启自动回滚修复</p>
+            </div>
+            <div class="grid-item">
+                <h3>快捷工具箱</h3>
+                <p>一键进入Rec、Fastboot、EDL深度下载模式</p>
+            </div>
+            <div class="grid-item">
+                <h3>模块统一管理</h3>
+                <p>批量开关Root模块，自动检测版本更新</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- 全品牌机型适配 -->
-        <section class="card" id="device">
-            <h2>全品牌手机、平板适配清单</h2>
-            <h4 style="margin:10px 0 16px;">支持：OPPO、一加、真我、小米、红米、魅族、联想、红魔、vivo，全系列设备通用</h4>
-            <ul style="margin-top:16px;line-height:2;">
-                <li>✅ OPPO/一加/真我：Find、Reno、一加Ace、真我GT全系完美适配</li>
-                <li>✅ 小米/红米：数字旗舰、Ultra、K游戏系列、Note千元机全部兼容</li>
-                <li>✅ vivo/iQOO：X影像、S轻薄、iQOO电竞机型无适配故障</li>
-                <li>✅ 游戏手机：红魔全系、联想拯救者电竞手机完整支持</li>
-                <li>✅ 魅族：Flyme所有GKI内核机型稳定运行</li>
-                <li>✅ 全品牌平板：小米、OPPO、vivo、联想、一加平板全部适配</li>
-                <li>✅ 系统：Android13/14/15 GKI内核设备，骁龙、天玑处理器全覆盖</li>
-            </ul>
-        </section>
+    <section class="card" id="device">
+        <h2>全品牌手机、平板适配清单</h2>
+        <h4 style="margin:10px 0 16px;">支持：OPPO、一加、真我、小米、红米、魅族、联想、红魔、vivo，全系列设备通用</h4>
+        <ul style="margin-top:16px;line-height:2;">
+            <li>✅ OPPO/一加/真我：Find、Reno、一加Ace、真我GT全系完美适配</li>
+            <li>✅ 小米/红米：数字旗舰、Ultra、K游戏系列、Note千元机全部兼容</li>
+            <li>✅ vivo/iQOO：X影像、S轻薄、iQOO电竞机型无适配故障</li>
+            <li>✅ 游戏手机：红魔全系、联想拯救者电竞手机完整支持</li>
+            <li>✅ 魅族：Flyme所有GKI内核机型稳定运行</li>
+            <li>✅ 全品牌平板：小米、OPPO、vivo、联想、一加平板全部适配</li>
+            <li>✅ 系统：Android13/14/15 GKI内核设备，骁龙、天玑处理器全覆盖</li>
+        </ul>
+    </section>
 
-        <!-- 主题预览 -->
-        <section class="card" id="theme">
-            <h2>内置主题预览</h2>
-            <ul style="margin-top:16px;line-height:2;">
-                <li>二次元纯白日间动漫主题（一加Ace3演示）</li>
-                <li>像素田园春日清新主题（真我GT7 Pro原生适配）</li>
-                <li>赛博朋克深色像素全套主题</li>
-                <li>维京雪原、敦煌国风、水墨仙侠像素风格</li>
-                <li>支持日夜自动切换、全局动态粒子毛玻璃界面</li>
-            </ul>
-        </section>
+    <section class="card" id="theme">
+        <h2>内置主题预览</h2>
+        <ul style="margin-top:16px;line-height:2;">
+            <li>二次元纯白日间动漫主题（一加Ace3演示）</li>
+            <li>像素田园春日清新主题（真我GT7 Pro原生适配）</li>
+            <li>赛博朋克深色像素全套主题</li>
+            <li>维京雪原、敦煌国风、水墨仙侠像素风格</li>
+            <li>支持日夜自动切换、全局动态粒子毛玻璃界面</li>
+        </ul>
+    </section>
 
-        <!-- 安装教程 -->
-        <section class="card" id="guide">
-            <h2>完整安装教程</h2>
-            <ol style="padding-left:20px;line-height:2;">
-                <li>Android13及以上新机：①提取init_boot镜像，进行ApkeSU修补，通过Kernel Flasher工具进行刷写
-                ②如果是KernelSU转root管理器只需要给ApkeSU超级用户权限，选择推荐直接安装模式就OK了</li>
-                <li>系统OTA升级后刷机：独立槽位安装ab槽位，防止更新掉root转入root分区使用的</li>
-                <li>Android12及以下旧机型：使用AnyKernel刷入指定的ak3包，选择指定的a/b分区</li>
-                <li>ApkeSU更新：如果发现内核和管理器不匹配，直接点击工作中，推荐直接安装就可以更新内核版本</li>
-            </ol>
-        </section>
-    </div>
+    <section class="card" id="guide">
+        <h2>完整安装教程</h2>
+        <ol style="padding-left:20px;line-height:2;">
+            <li>Android13及以上新机：①提取init_boot镜像，进行ApkeSU修补，通过Kernel Flasher工具进行刷写
+            ②如果是KernelSU转root管理器只需要给ApkeSU超级用户权限，选择推荐直接安装模式就OK了</li>
+            <li>系统OTA升级后刷机：独立槽位安装ab槽位，防止更新掉root转入root分区使用的</li>
+            <li>Android12及以下旧机型：使用AnyKernel刷入指定的ak3包，选择指定的a/b分区</li>
+            <li>ApkeSU更新：如果发现内核和管理器不匹配，直接点击工作中，推荐直接安装就可以更新内核版本</li>
+        </ol>
+    </section>
+</div>
 
-    <!-- 底部页脚 -->
-    <footer>
-        <p>ApkeSU Open Source Project © 2026｜文件分发：123云盘CDN</p>
-        <p style="margin-top:8px;font-size:14px;">QQ群：778719605（点击一下进QQ加群）｜频道ID：pd33557570（点击一下加入频道）</p>
-        <p style="margin-top:8px;font-size:14px;">适配设备：OPPO/一加/真我/小米/红米/vivo/红魔/联想/魅族 全手机平板</p>
-        <p style="margin-top:8px;font-size:14px;color:#888;">仅用于安卓设备技术学习调试，禁止违规商用</p>
-    </footer>
+<footer>
+    <p>ApkeSU Open Source Project © 2026｜文件分发：123云盘CDN</p>
+    <p style="margin-top:8px;font-size:14px;">QQ群：778719605｜QQ频道（复制链接加入）</p>
+    <p style="margin-top:8px;font-size:14px;">适配设备：OPPO/一加/真我/小米/红米/vivo/红魔/联想/魅族 全手机平板</p>
+    <p style="margin-top:8px;font-size:14px;color:#888;">仅用于安卓设备技术学习调试，禁止违规商用</p>
+</footer>
+
+<script>
+// 通用一键复制函数
+function copyText(text) {
+    let tempInput = document.createElement('textarea');
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    // 弹出提示
+    const toast = document.getElementById('toast');
+    toast.style.display = 'block';
+    setTimeout(()=>toast.style.display = 'none', 2000);
+}
+</script>
 </body>
 </html>
